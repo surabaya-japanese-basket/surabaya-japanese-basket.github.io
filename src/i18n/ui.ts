@@ -30,6 +30,7 @@ export const ui = {
       body: [
         'インドネシア・スラバヤに住む日本人が集まって活動しているバスケットボールチームです。',
         '年代は20代から50代まで。初めての方から経験者まで、ゆるーく楽しくプレーしています。',
+        'インドネシアの方も数名、一緒にプレーしています。',
         'スラバヤへの出張・旅行の際の参加も歓迎です。',
       ],
       facts: [
@@ -98,6 +99,7 @@ export const ui = {
       body: [
         'We are a basketball team made up of Japanese residents living in Surabaya, Indonesia.',
         'Our members are in their 20s to 50s, from first-timers to experienced players, and we play in a relaxed, friendly way.',
+        'A few Indonesian players join us as well.',
         'Visitors to Surabaya on business or travel are welcome to join, too.',
       ],
       facts: [
