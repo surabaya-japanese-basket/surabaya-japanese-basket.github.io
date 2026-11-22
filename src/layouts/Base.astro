@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Mascots from '../components/Mascots.astro';
 import { ui, languages, type Lang } from '../i18n/ui';
 
 interface Props {
@@ -44,7 +45,11 @@ const href = (l: Lang) => (l === 'ja' ? `${base}/` : `${base}/en/`);
       <slot />
     </main>
     <footer class="footer">
-      <div class="wrap">{t.footer}</div>
+      <div class="wrap">
+        <Mascots compact />
+        <p class="tagline">{t.tagline}</p>
+        <p>{t.footer}</p>
+      </div>
     </footer>
   </body>
 </html>

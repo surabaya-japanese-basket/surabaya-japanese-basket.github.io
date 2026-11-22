@@ -1,0 +1,53 @@
+---
+// スラバヤ（Sura=サメ / Baya=ワニ）のワンポイント装飾。仮の自作イラスト。
+// ユニフォームのロゴ素材を受け取ったら差し替える。市の公式紋章は使わない。
+interface Props {
+  compact?: boolean;
+}
+const { compact = false } = Astro.props;
+---
+
+<svg
+  class:list={['mascots', { compact }]}
+  viewBox="0 0 640 96"
+  role="presentation"
+  aria-hidden="true"
+  focusable="false"
+>
+  <rect class="water" x="0" y="58" width="640" height="38"></rect>
+  <path class="fin" d="M96 60 C 112 56 124 38 134 8 C 140 32 156 52 176 60 Z"></path>
+  <rect class="croc" x="404" y="48" width="104" height="14" rx="7"></rect>
+  <circle class="croc" cx="412" cy="46" r="3.6"></circle>
+  <circle class="croc" cx="474" cy="43" r="6.5"></circle>
+  <circle class="croc" cx="494" cy="43" r="6.5"></circle>
+  <circle class="eye" cx="474" cy="42" r="2"></circle>
+  <circle class="eye" cx="494" cy="42" r="2"></circle>
+  <path
+    class="wave"
+    d="M0 60 Q 20 54 40 60 T 80 60 T 120 60 T 160 60 T 200 60 T 240 60 T 280 60 T 320 60 T 360 60 T 400 60 T 440 60 T 480 60 T 520 60 T 560 60 T 600 60 T 640 60"
+  ></path>
+</svg>
+
+<style>
+  .mascots {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 36px;
+  }
+  .mascots.compact {
+    max-width: 320px;
+    margin: 0 0 12px;
+  }
+  .water { fill: var(--color-accent); opacity: 0.08; }
+  .fin { fill: var(--color-text); opacity: 0.88; }
+  .croc { fill: var(--color-accent); }
+  .eye { fill: var(--color-bg); }
+  .wave {
+    fill: none;
+    stroke: var(--color-accent);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    opacity: 0.55;
+  }
+</style>
