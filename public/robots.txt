@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://surabaya-japanese-basket.github.io/sitemap.xml

@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Mascots from '../components/Mascots.astro';
-import { ui, languages, FORM_URL, type Lang } from '../i18n/ui';
+import { ui, languages, FORM_URL, INSTAGRAM_URL, type Lang } from '../i18n/ui';
 
 interface Props {
   lang: Lang;
@@ -14,6 +14,24 @@ const href = (l: Lang) => (l === 'ja' ? `${base}/` : `${base}/en/`);
 // リンク共有（LINE / Instagram / X など）で表示されるプレビュー画像。絶対URLが必要。
 const ogImage = new URL(`${base}/banners/ogp.png`, Astro.site).href;
 const pageUrl = new URL(href(lang), Astro.site).href;
+const absHref = (l: Lang) => new URL(href(l), Astro.site).href;
+
+// 検索エンジン向けの構造化データ（確認済みの事実のみ）。
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SportsTeam',
+  name: t.siteName,
+  sport: 'Basketball',
+  url: pageUrl,
+  description: t.description,
+  inLanguage: lang,
+  location: {
+    '@type': 'Place',
+    name: 'MAXICOURT Royal Surabaya',
+    address: { '@type': 'PostalAddress', addressLocality: 'Surabaya', addressCountry: 'ID' },
+  },
+  sameAs: [INSTAGRAM_URL],
+};
 ---
 
 <!doctype html>
@@ -36,8 +54,10 @@ const pageUrl = new URL(href(lang), Astro.site).href;
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={pageUrl} />
     <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
-    <link rel="alternate" hreflang="ja" href={href('ja')} />
-    <link rel="alternate" hreflang="en" href={href('en')} />
+    <link rel="alternate" hreflang="ja" href={absHref('ja')} />
+    <link rel="alternate" hreflang="en" href={absHref('en')} />
+    <link rel="alternate" hreflang="x-default" href={absHref('ja')} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
