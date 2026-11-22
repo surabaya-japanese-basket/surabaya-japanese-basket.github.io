@@ -96,7 +96,7 @@ const photos = Object.entries(
       <p>{t.gallery.lead}</p>
       {
         photos.length > 0 ? (
-          <div class="gallery-grid">
+          <div class:list={['gallery-grid', { many: photos.length > 4 }]}>
             {photos.map((src) => (
               <Image src={src} alt={t.gallery.alt} width={720} height={480} loading="lazy" />
             ))}
