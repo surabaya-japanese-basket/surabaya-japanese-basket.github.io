@@ -1,0 +1,108 @@
+---
+// 画面をクリック／タップすると、その位置からバスケットボールが落ちて跳ねる。
+// リンク・ボタン・フォーム部品の上では出さない。動きを減らす設定の人には出さない。
+---
+
+<div id="ball-layer" aria-hidden="true"></div>
+
+<style is:global>
+  #ball-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 50;
+  }
+  .bball {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    will-change: transform, opacity;
+  }
+  .bball svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: #f08a24;
+    stroke: #6b2f08;
+    stroke-width: 1.2;
+    stroke-linecap: round;
+  }
+</style>
+
+<script>
+  const layer = document.getElementById('ball-layer');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const SVG =
+    '<svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="10.8"></circle>' +
+    '<path d="M12 1.2v21.6M1.2 12h21.6M4.5 4.5c3.7 3.7 3.7 11.3 0 15M19.5 4.5c-3.7 3.7-3.7 11.3 0 15" fill="none"></path></svg>';
+  const SIZE = 36;
+  const GRAVITY = 1800; // px/s^2
+  const RESTITUTION = 0.72;
+  const MAX_BALLS = 12;
+  let count = 0;
+
+  function spawn(x: number, y: number) {
+    if (!layer || count >= MAX_BALLS) return;
+    count++;
+    const el = document.createElement('div');
+    el.className = 'bball';
+    el.innerHTML = SVG;
+    layer.appendChild(el);
+
+    let px = x - SIZE / 2;
+    let py = y - SIZE / 2;
+    let vx = (Math.random() - 0.5) * 360;
+    let vy = -200 - Math.random() * 200;
+    let rot = 0;
+    const vr = vx * 0.9;
+    let bounces = 0;
+    let last = performance.now();
+    let fade = 0;
+
+    function frame(now: number) {
+      const dt = Math.min((now - last) / 1000, 0.032);
+      last = now;
+      vy += GRAVITY * dt;
+      px += vx * dt;
+      py += vy * dt;
+      rot += vr * dt;
+      const floor = window.innerHeight - SIZE;
+      const right = window.innerWidth - SIZE;
+      if (py > floor) {
+        py = floor;
+        vy = -vy * RESTITUTION;
+        vx *= 0.9;
+        bounces++;
+      }
+      if (px < 0) { px = 0; vx = Math.abs(vx) * 0.8; }
+      if (px > right) { px = right; vx = -Math.abs(vx) * 0.8; }
+      // 何度か跳ねたら、静かに消える
+      if (bounces >= 5 || Math.abs(vy) < 40 && py >= floor - 1) fade += dt / 0.6;
+      const opacity = Math.max(0, 1 - fade);
+      el.style.transform = `translate(${px}px, ${py}px) rotate(${rot}deg)`;
+      el.style.opacity = String(opacity);
+      if (opacity <= 0) {
+        el.remove();
+        count--;
+        return;
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  if (layer && !reduce) {
+    document.addEventListener('click', (e) => {
+      const target = e.target as Element | null;
+      if (target?.closest('a, button, summary, input, textarea, select, label, [role="button"]')) return;
+      spawn(e.clientX, e.clientY);
+    });
+    // 初回表示で一度だけ、ヒーローの上からボールを落として「触れる」ことを伝える
+    window.addEventListener('load', () => {
+      setTimeout(() => spawn(window.innerWidth * 0.5, -10), 600);
+    });
+  }
+</script>
