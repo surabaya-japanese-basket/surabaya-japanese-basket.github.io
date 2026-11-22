@@ -1,8 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// GitHub Pages（プロジェクトサイト）用。独自ドメインにしたら base を外す。
+// GitHub Pages（組織サイト: <org>.github.io）。ルート直下に配信されるので base は不要。
 export default defineConfig({
-  site: 'https://yukinw6.github.io',
-  base: '/surabaya-japanese-basketball',
+  site: 'https://surabaya-japanese-basket.github.io',
 });
