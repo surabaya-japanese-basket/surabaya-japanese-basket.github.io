@@ -102,7 +102,25 @@ const photos = Object.entries(
     </div>
   </section>
 
-  <section class="block" id="gallery">
+  <section class="block" id="faq">
+    <div class="wrap">
+      <p class="kicker">FAQ</p>
+      <h2>{t.faq.heading}</h2>
+      <p>{t.faq.lead}</p>
+      <div class="faq-list">
+        {
+          t.faq.items.map((item) => (
+            <details class="faq-item">
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint" id="gallery">
     <div class="wrap">
       <p class="kicker">GALLERY</p>
       <h2>{t.gallery.heading}</h2>
@@ -126,7 +144,7 @@ const photos = Object.entries(
     </div>
   </section>
 
-  <section class="block tint" id="share">
+  <section class="block" id="share">
     <div class="wrap">
       <p class="kicker">SHARE</p>
       <h2>{t.share.heading}</h2>

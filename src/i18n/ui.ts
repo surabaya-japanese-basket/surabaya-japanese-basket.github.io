@@ -18,7 +18,7 @@ export const ui = {
     title: 'スラバヤ日本人会バスケ部 | スラバヤ在住の日本人バスケチーム',
     description:
       'インドネシア・スラバヤ在住の日本人バスケチーム。毎週土曜の夕方に練習しています。初心者から経験者まで、ゆるーく活動中。',
-    nav: { about: 'チーム紹介', join: '参加案内', gallery: 'ギャラリー', contact: '連絡先', cta: '参加する' },
+    nav: { about: 'チーム紹介', join: '参加案内', faq: 'はじめての方へ', gallery: 'ギャラリー', contact: '連絡先', cta: '参加する' },
     hero: {
       badge: 'メンバー募集中',
       eyebrow: 'Surabaya Japanese Basket',
@@ -59,6 +59,29 @@ export const ui = {
       ],
       note: '人数が足りないときは、Golden City Mall でインドネシアの方々のチームに混ぜてもらうこともあります。その週の場所・開催状況は、フォームまたは Instagram の DM でお問い合わせください。',
     },
+    faq: {
+      heading: 'はじめての方へ',
+      lead: 'よくいただく質問です。ここにないことは、フォームか Instagram の DM でお気軽にどうぞ。',
+      items: [
+        { q: '初心者でも大丈夫ですか？', a: '大丈夫です。初めての方から経験者まで、ゆるく楽しくプレーしています。' },
+        { q: 'ブランクがあっても大丈夫ですか？', a: '大丈夫です。ブランクのない人のほうが少ないくらいなので、久しぶりの方も気軽にどうぞ。' },
+        { q: '何を持っていけばいいですか？', a: '動きやすい服装、体育館シューズ、飲み物があれば大丈夫です。' },
+        { q: '参加費はいくらですか？', a: 'Rp 50,000 前後です。会場や人数によって変わります。' },
+        {
+          q: 'いつ、どこでやっていますか？',
+          a: '毎週土曜日の 16:00〜18:00 に、MAXICOURT Royal Surabaya または Golden City Mall で練習しています。その週の場所は、フォームか Instagram の DM でご確認ください。',
+        },
+        {
+          q: '人が少ない日はどうなりますか？',
+          a: 'ハーフコートで楽しむことがあります。人数が足りないときは、Golden City Mall でインドネシアの方々のチームに混ぜてもらうこともあります。',
+        },
+        {
+          q: '出張や旅行中でも参加できますか？',
+          a: '歓迎します。申込フォームの「希望」で、「出張・旅行中に参加したい」を選んでください。',
+        },
+        { q: '申し込み方法は？', a: 'このページのフォーム、または Instagram の DM からどうぞ。' },
+      ],
+    },
     gallery: {
       heading: 'ギャラリー',
       lead: '練習や交流試合の様子は Instagram で更新しています。',
@@ -92,7 +115,7 @@ export const ui = {
     title: 'Surabaya Japanese Basket | A friendly basketball team in Surabaya',
     description:
       'A basketball team of Japanese residents in Surabaya, Indonesia. We practice every Saturday evening. Beginners to experienced players are all welcome.',
-    nav: { about: 'About', join: 'Join us', gallery: 'Gallery', contact: 'Contact', cta: 'Join' },
+    nav: { about: 'About', join: 'Join us', faq: 'FAQ', gallery: 'Gallery', contact: 'Contact', cta: 'Join' },
     hero: {
       badge: 'Players wanted',
       eyebrow: 'Surabaya Japanese Basket',
@@ -132,6 +155,29 @@ export const ui = {
         { label: 'Bring', value: 'Comfortable clothes, indoor court shoes, and a drink' },
       ],
       note: 'When we are short on players, we sometimes join local Indonesian teams at Golden City Mall. For that week\'s venue and whether we are playing, please use the form or send us a DM on Instagram.',
+    },
+    faq: {
+      heading: 'New here?',
+      lead: 'Answers to common questions. If yours is not here, use the form or send us a DM on Instagram.',
+      items: [
+        { q: 'Is it OK if I am a beginner?', a: 'Yes. Our members range from first-timers to experienced players, and we play in a relaxed, friendly way.' },
+        { q: 'What if I have not played in years?', a: 'No problem. Most of our members have had a break from basketball, so you will fit right in.' },
+        { q: 'What should I bring?', a: 'Comfortable clothes, indoor court shoes, and a drink are all you need.' },
+        { q: 'How much does it cost?', a: 'Around Rp 50,000. It varies by venue and turnout.' },
+        {
+          q: 'When and where do you play?',
+          a: 'Saturdays, 4:00 PM to 6:00 PM, at MAXICOURT Royal Surabaya or Golden City Mall. For that week\'s venue, please check with us through the form or an Instagram DM.',
+        },
+        {
+          q: 'What happens when few people show up?',
+          a: 'We sometimes play half-court. When we are short on players, we may also join local Indonesian teams at Golden City Mall.',
+        },
+        {
+          q: 'Can I join while visiting Surabaya on business or travel?',
+          a: 'Yes, visitors are welcome. In the form, choose "I want to join while on a business trip or traveling" under the preferences question. (The form is in Japanese.)',
+        },
+        { q: 'How do I apply?', a: 'Use the form on this page or send us a DM on Instagram.' },
+      ],
     },
     gallery: {
       heading: 'Gallery',
