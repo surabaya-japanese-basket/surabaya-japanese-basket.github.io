@@ -58,7 +58,7 @@ export const ui = {
         { label: '持ち物', value: '動きやすい服装・体育館シューズ・飲み物' },
       ],
       note: '人数が足りないときはローカルのインドネシアの方々を誘ったり、逆に参加させて頂いたりしています。',
-      alert: '会場と開催の有無は、毎週変わります。参加の前に、必ずフォームか Instagram の DM でご連絡ください。',
+      alert: '基本は毎週土曜に開催しています。会場は週によって変わるため、参加の前に、フォームか Instagram の DM でご連絡ください。',
     },
     faq: {
       heading: 'はじめての方へ',
@@ -166,7 +166,7 @@ export const ui = {
         { label: 'Bring', value: 'Comfortable clothes, indoor court shoes, and a drink' },
       ],
       note: 'When we are short on players, we sometimes invite local Indonesian players to join us, or join local Indonesian teams ourselves.',
-      alert: 'The venue and whether we are playing change every week. Please always contact us through the form or an Instagram DM before you come.',
+      alert: 'We basically play every Saturday. The venue changes from week to week, so please contact us through the form or an Instagram DM before you come.',
     },
     faq: {
       heading: 'New here?',
