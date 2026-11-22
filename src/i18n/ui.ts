@@ -17,13 +17,13 @@ export const ui = {
     siteName: 'スラバヤ日本人会バスケ部',
     title: 'スラバヤ日本人会バスケ部 | スラバヤ在住の日本人バスケチーム',
     description:
-      'インドネシア・スラバヤ在住の日本人バスケチーム。毎週土曜の夕方に練習しています。経験は問いません。やる気のある方、お待ちしています。',
+      'インドネシア・スラバヤ在住の日本人バスケチーム。毎週土曜の夕方に練習しています。初心者から経験者まで、ゆるーく活動中。',
     nav: { about: 'チーム紹介', join: '参加案内', faq: 'はじめての方へ', gallery: 'ギャラリー', contact: '連絡先', cta: '参加する' },
     hero: {
       badge: 'メンバー募集中',
       eyebrow: 'Surabaya Japanese Basket',
       heading: 'スラバヤで、\nゆるく楽しくバスケ。',
-      lead: 'スラバヤ在住の日本人バスケチームです。毎週土曜の夕方に練習しています。経験は問いません。やる気のある仲間を募集中です。',
+      lead: 'スラバヤ在住の日本人バスケチームです。毎週土曜の夕方に練習しています。初心者から経験者まで、一緒にプレーしてくれる仲間を募集中です。',
       photoAlt: 'バスケの試合後に、日本人メンバーと対戦相手のみんなで撮った集合写真',
       cta: 'フォームで参加・見学を申込',
       ctaDm: 'Instagram の DM で相談',
@@ -35,7 +35,7 @@ export const ui = {
       heading: 'チーム紹介',
       body: [
         'インドネシア・スラバヤに住む日本人が集まって活動しているバスケットボールチームです。',
-        '年代は20代から50代まで。経験もさまざまで、ゆるーく楽しくプレーしています。',
+        '年代は20代から50代まで。初めての方から経験者まで、ゆるーく楽しくプレーしています。',
         'インドネシアの方も数名、一緒にプレーしています。',
         '人数が少ない日は、ハーフコートで楽しむこともあります。気負わず、気軽に遊びに来てください。',
         'スラバヤへの出張・旅行の際の参加も歓迎です。',
@@ -44,7 +44,7 @@ export const ui = {
         { label: '活動', value: '毎週土曜の夕方' },
         { label: '部員', value: '十数名' },
         { label: '年代', value: '20代〜50代' },
-        { label: 'レベル', value: '経験不問' },
+        { label: 'レベル', value: '初心者〜経験者' },
       ],
     },
     join: {
@@ -63,7 +63,7 @@ export const ui = {
       heading: 'はじめての方へ',
       lead: 'よくいただく質問です。ここにないことは、フォームか Instagram の DM でお気軽にどうぞ。',
       items: [
-        { q: '初心者でも大丈夫ですか？', a: '経験は問いません。やる気のある方なら、初心者でも続いています。未経験だからという理由で、お断りすることはありません。' },
+        { q: '初心者でも大丈夫ですか？', a: '大丈夫です。初めての方から経験者まで、ゆるく楽しくプレーしています。' },
         { q: 'ブランクがあっても大丈夫ですか？', a: '大丈夫です。ブランクのない人のほうが少ないくらいなので、久しぶりの方も気軽にどうぞ。' },
         { q: '何を持っていけばいいですか？', a: '動きやすい服装、体育館シューズ、飲み物があれば大丈夫です。' },
         { q: '参加費はいくらですか？', a: 'Rp 50,000 前後です。会場や人数によって変わります。' },
@@ -114,13 +114,13 @@ export const ui = {
     siteName: 'Surabaya Japanese Basket',
     title: 'Surabaya Japanese Basket | A friendly basketball team in Surabaya',
     description:
-      'A basketball team of Japanese residents in Surabaya, Indonesia. We practice every Saturday evening. No experience required. We are looking for motivated players.',
+      'A basketball team of Japanese residents in Surabaya, Indonesia. We practice every Saturday evening. Beginners to experienced players are all welcome.',
     nav: { about: 'About', join: 'Join us', faq: 'FAQ', gallery: 'Gallery', contact: 'Contact', cta: 'Join' },
     hero: {
       badge: 'Players wanted',
       eyebrow: 'Surabaya Japanese Basket',
       heading: 'Easygoing\nbasketball in Surabaya.',
-      lead: 'We are a basketball team of Japanese residents in Surabaya. We practice every Saturday evening. No experience required, and we are looking for motivated players to join us.',
+      lead: 'We are a basketball team of Japanese residents in Surabaya. We practice every Saturday evening, and we are looking for more players, from beginners to experienced.',
       photoAlt: 'A group photo of our members and the opposing team after a game',
       cta: 'Apply to join or visit',
       ctaDm: 'Message us on Instagram',
@@ -132,7 +132,7 @@ export const ui = {
       heading: 'About the team',
       body: [
         'We are a basketball team made up of Japanese residents living in Surabaya, Indonesia.',
-        'Our members are in their 20s to 50s, with a mix of experience levels, and we play in a relaxed, friendly way.',
+        'Our members are in their 20s to 50s, from first-timers to experienced players, and we play in a relaxed, friendly way.',
         'A few Indonesian players join us as well.',
         'On days when fewer people show up, we sometimes play half-court. No need to be nervous. Just come and join us.',
         'Visitors to Surabaya on business or travel are welcome to join, too.',
@@ -141,7 +141,7 @@ export const ui = {
         { label: 'When', value: 'Saturday evenings' },
         { label: 'Members', value: 'Over 10' },
         { label: 'Ages', value: '20s – 50s' },
-        { label: 'Experience', value: 'Not required' },
+        { label: 'Level', value: 'Beginners to experienced' },
       ],
     },
     join: {
@@ -160,7 +160,7 @@ export const ui = {
       heading: 'New here?',
       lead: 'Answers to common questions. If yours is not here, use the form or send us a DM on Instagram.',
       items: [
-        { q: 'Is it OK if I am a beginner?', a: 'Yes. Experience is not required. Newcomers who are keen to play tend to stick with it, and we do not turn anyone away for being a beginner.' },
+        { q: 'Is it OK if I am a beginner?', a: 'Yes. Our members range from first-timers to experienced players, and we play in a relaxed, friendly way.' },
         { q: 'What if I have not played in years?', a: 'No problem. Most of our members have had a break from basketball, so you will fit right in.' },
         { q: 'What should I bring?', a: 'Comfortable clothes, indoor court shoes, and a drink are all you need.' },
         { q: 'How much does it cost?', a: 'Around Rp 50,000. It varies by venue and turnout.' },
