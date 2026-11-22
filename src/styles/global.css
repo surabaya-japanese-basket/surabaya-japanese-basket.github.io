@@ -159,6 +159,20 @@ h1, h2 { text-wrap: balance; font-feature-settings: 'palt'; }
   text-underline-offset: 4px;
 }
 .lang-link:hover { filter: brightness(1.15); }
+
+@media (min-width: 900px) {
+  .hero-inner.has-photo .cta-row .btn { padding: 13px 20px; font-size: 0.95rem; }
+}
+.form-note { margin: 10px 0 0 !important; font-size: 0.85rem; color: var(--color-muted); }
+.link-row { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 0 !important; }
+.link-row .lang-link { margin-top: 12px; }
+.join-cta { margin-top: 22px; }
+.btn.outline-light {
+  background: transparent;
+  color: var(--color-accent-ink);
+  border-color: color-mix(in srgb, var(--color-accent-ink) 70%, transparent);
+}
+.btn.outline-light:hover { border-color: var(--color-accent-ink); filter: none; }
 .footer .lang-link { margin: 6px 0 10px; }
 @media (max-width: 480px) { .cta-row .btn { flex: 1 1 100%; text-align: center; } }
 

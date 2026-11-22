@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Mascots from '../components/Mascots.astro';
-import { ui, languages, INSTAGRAM_URL, type Lang } from '../i18n/ui';
+import { ui, languages, FORM_URL, type Lang } from '../i18n/ui';
 
 interface Props {
   lang: Lang;
@@ -63,7 +63,7 @@ const pageUrl = new URL(href(lang), Astro.site).href;
             <a href="#gallery">{t.nav.gallery}</a>
           </div>
           <a class="lang" href={href(other)} hreflang={other} lang={other}>{languages[other]}</a>
-          <a class="nav-cta" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.nav.cta}</a>
+          <a class="nav-cta" href={FORM_URL} target="_blank" rel="noopener noreferrer">{t.nav.cta}</a>
         </nav>
       </div>
     </header>

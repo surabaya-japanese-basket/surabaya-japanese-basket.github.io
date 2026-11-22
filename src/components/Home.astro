@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Mascots from './Mascots.astro';
 import CourtLines from './CourtLines.astro';
-import { ui, INSTAGRAM_URL, type Lang } from '../i18n/ui';
+import { ui, INSTAGRAM_URL, FORM_URL, type Lang } from '../i18n/ui';
 
 interface Props {
   lang: Lang;
@@ -35,10 +35,14 @@ const photos = Object.entries(
         <h1>{t.hero.heading}</h1>
         <p class="lead">{t.hero.lead}</p>
         <div class="cta-row">
-          <a class="btn" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.hero.cta}</a>
-          <a class="btn ghost" href="#join">{t.hero.ctaSub}</a>
+          <a class="btn" href={FORM_URL} target="_blank" rel="noopener noreferrer">{t.hero.cta}</a>
+          <a class="btn ghost" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.hero.ctaDm}</a>
         </div>
-        <a class="lang-link" href={otherHref} hreflang={other} lang={other}>{t.hero.langLink} →</a>
+        <p class="form-note">{t.hero.formNote}</p>
+        <p class="link-row">
+          <a class="lang-link" href="#join">{t.hero.ctaSub} ↓</a>
+          <a class="lang-link" href={otherHref} hreflang={other} lang={other}>{t.hero.langLink} →</a>
+        </p>
       </div>
       {
         photos[0] && (
@@ -91,6 +95,10 @@ const photos = Object.entries(
         }
       </dl>
       <p class="note">{t.join.note}</p>
+      <div class="cta-row join-cta">
+        <a class="btn" href={FORM_URL} target="_blank" rel="noopener noreferrer">{t.hero.cta}</a>
+        <a class="btn ghost" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.hero.ctaDm}</a>
+      </div>
     </div>
   </section>
 
@@ -152,7 +160,10 @@ const photos = Object.entries(
       <p class="kicker light">CONTACT</p>
       <h2>{t.contact.title}</h2>
       <p>{t.contact.lead}</p>
-      <a class="btn invert" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.contact.cta}</a>
+      <div class="cta-row">
+        <a class="btn invert" href={FORM_URL} target="_blank" rel="noopener noreferrer">{t.contact.cta}</a>
+        <a class="btn outline-light" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.contact.ctaDm}</a>
+      </div>
     </div>
   </section>
 </Base>

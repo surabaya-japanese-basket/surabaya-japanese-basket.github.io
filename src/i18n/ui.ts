@@ -6,6 +6,10 @@ export const languages = {
 export type Lang = keyof typeof languages;
 
 export const INSTAGRAM_URL = 'https://www.instagram.com/surabayajapanesebasket/';
+
+// 参加・見学の申込フォーム（Google フォーム）。公開リンクのみ。回答はフォーム所有者が見る。
+export const FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSejE9ZqRkHOjg5ED4WZEpd48OgmKpiPvwkH64a5XzVKn9qF0w/viewform';
 // 未確認の項目は TODO と明記。確定したらここだけ差し替える。
 export const ui = {
   ja: {
@@ -21,7 +25,9 @@ export const ui = {
       heading: 'スラバヤで、\nゆるく楽しくバスケ。',
       lead: 'スラバヤ在住の日本人バスケチームです。毎週土曜の夕方に練習しています。初心者から経験者まで、一緒にプレーしてくれる仲間を募集中です。',
       photoAlt: 'バスケの試合後に、日本人メンバーと対戦相手のみんなで撮った集合写真',
-      cta: 'Instagram の DM で参加相談',
+      cta: 'フォームで参加・見学を申込',
+      ctaDm: 'Instagram の DM で相談',
+      formNote: '名前と連絡先だけ、1分で送れます。',
       ctaSub: '参加案内を見る',
       langLink: 'English version',
     },
@@ -51,7 +57,7 @@ export const ui = {
         { label: '参加費', value: 'Rp 50,000 前後（会場・人数により変わります）' },
         { label: '持ち物', value: '動きやすい服装・体育館シューズ・飲み物' },
       ],
-      note: '人数が足りないときは、Golden City Mall でインドネシアの方々のチームに混ぜてもらうこともあります。その週の場所・開催状況は、Instagram の DM でお問い合わせください。',
+      note: '人数が足りないときは、Golden City Mall でインドネシアの方々のチームに混ぜてもらうこともあります。その週の場所・開催状況は、フォームまたは Instagram の DM でお問い合わせください。',
     },
     gallery: {
       heading: 'ギャラリー',
@@ -74,8 +80,9 @@ export const ui = {
     contact: {
       heading: '連絡先',
       title: '一緒に、バスケしませんか？',
-      lead: '参加希望・見学・スラバヤ出張時の参加など、Instagram の DM からお気軽にどうぞ。',
-      cta: 'Instagram で DM する',    },
+      lead: '参加希望・見学・スラバヤ出張時の参加など、フォームか Instagram の DM から、お気軽にどうぞ。',
+      cta: 'フォームで参加・見学を申込',
+      ctaDm: 'Instagram で DM する',    },
     tagline: 'スラバヤは、Sura（サメ）と Baya（ワニ）の街。',
     footer: '© スラバヤ日本人会バスケ部',
   },
@@ -92,7 +99,9 @@ export const ui = {
       heading: 'Easygoing\nbasketball in Surabaya.',
       lead: 'We are a basketball team of Japanese residents in Surabaya. We practice every Saturday evening, and we are looking for more players, from beginners to experienced.',
       photoAlt: 'A group photo of our members and the opposing team after a game',
-      cta: 'Message us on Instagram',
+      cta: 'Apply to join or visit',
+      ctaDm: 'Message us on Instagram',
+      formNote: 'The form is in Japanese. Just your name and contact info.',
       ctaSub: 'How to join',
       langLink: '日本語版はこちら',
     },
@@ -122,7 +131,7 @@ export const ui = {
         { label: 'Fee', value: 'Around Rp 50,000 (varies by venue and turnout)' },
         { label: 'Bring', value: 'Comfortable clothes, indoor court shoes, and a drink' },
       ],
-      note: 'When we are short on players, we sometimes join local Indonesian teams at Golden City Mall. For that week\'s venue and whether we are playing, please send us a DM on Instagram.',
+      note: 'When we are short on players, we sometimes join local Indonesian teams at Golden City Mall. For that week\'s venue and whether we are playing, please use the form or send us a DM on Instagram.',
     },
     gallery: {
       heading: 'Gallery',
@@ -145,8 +154,9 @@ export const ui = {
     contact: {
       heading: 'Contact',
       title: 'Come play with us.',
-      lead: 'To join, visit, or drop in while you are in Surabaya, send us a DM on Instagram.',
-      cta: 'DM us on Instagram',    },
+      lead: 'To join, visit, or drop in while you are in Surabaya, use the form or send us a DM on Instagram.',
+      cta: 'Apply to join or visit',
+      ctaDm: 'DM us on Instagram',    },
     tagline: 'Surabaya: the city of Sura (shark) and Baya (crocodile).',
     footer: '© Surabaya Japanese Basket',
   },
