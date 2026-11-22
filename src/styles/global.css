@@ -291,6 +291,33 @@ section.block p.note {
 .faq-item[open] { border-color: var(--color-accent); }
 .faq-item p { margin: 0; padding: 0 18px 16px; color: var(--color-muted); }
 
+/* ---------- 部長の声 ---------- */
+.voice-card {
+  position: relative;
+  margin: 24px 0 0;
+  max-width: 760px;
+  background: var(--color-surface);
+  border-left: 6px solid var(--color-accent);
+  border-radius: 6px var(--radius) var(--radius) 6px;
+  padding: 34px 28px 24px 30px;
+}
+.voice-card::before {
+  content: '\201C';
+  position: absolute;
+  left: 22px;
+  top: -6px;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--color-accent);
+  opacity: 0.25;
+}
+.voice-card blockquote { margin: 0; }
+.voice-card blockquote p { margin: 0 0 12px !important; max-width: none !important; }
+.voice-card figcaption { margin-top: 18px; font-weight: 700; color: var(--color-accent); font-size: 0.92rem; }
+.voice-card figcaption::before { content: ''; display: inline-block; width: 22px; height: 3px; margin-right: 10px; vertical-align: middle; background: currentColor; border-radius: 2px; }
+
 /* ---------- share banners ---------- */
 .share-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 24px 0 20px; align-items: start; }
 @media (min-width: 760px) { .share-grid { grid-template-columns: 1.4fr 1fr; } }

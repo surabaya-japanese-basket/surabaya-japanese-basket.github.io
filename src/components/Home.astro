@@ -144,7 +144,20 @@ const photos = Object.entries(
     </div>
   </section>
 
-  <section class="block" id="share">
+  <section class="block" id="voice">
+    <div class="wrap">
+      <p class="kicker">VOICE</p>
+      <h2>{t.voice.heading}</h2>
+      <figure class="voice-card">
+        <blockquote>
+          {t.voice.paragraphs.map((p) => <p>{p}</p>)}
+        </blockquote>
+        <figcaption>{t.voice.role}</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block tint" id="share">
     <div class="wrap">
       <p class="kicker">SHARE</p>
       <h2>{t.share.heading}</h2>

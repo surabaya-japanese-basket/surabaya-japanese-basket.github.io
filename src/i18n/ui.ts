@@ -82,6 +82,17 @@ export const ui = {
         { q: '申し込み方法は？', a: 'このページのフォーム、または Instagram の DM からどうぞ。' },
       ],
     },
+    voice: {
+      heading: '部長より',
+      role: 'スラバヤ日本人会バスケ部 部長',
+      paragraphs: [
+        'スラバヤでの勤務も半年が経ちました。',
+        '本来であれば、慣れない環境での生活には時間がかかるものですが、近隣の飲食店やショッピングスポットなど、さまざまな情報を教えていただき、おかげさまでスムーズに生活に馴染むことができ、大変感謝しています。',
+        'バスケットボールだけでなく、仕事面で役立つ繋がりやゴルフなど、これからさらに楽しみが増えていくことと思います。',
+        '最近では、他国の方々と一緒にバスケットボールを楽しむ機会にも恵まれ、交流の輪が広がっていることを嬉しく感じています。',
+        '是非一緒に、仕事とプライベートの両方を充実させながら、スラバヤでの生活を楽しみましょう☺',
+      ],
+    },
     gallery: {
       heading: 'ギャラリー',
       lead: '練習や交流試合の様子は Instagram で更新しています。',
@@ -177,6 +188,17 @@ export const ui = {
           a: 'Yes, visitors are welcome. In the form, choose "I want to join while on a business trip or traveling" under the preferences question. (The form is in Japanese.)',
         },
         { q: 'How do I apply?', a: 'Use the form on this page or send us a DM on Instagram.' },
+      ],
+    },
+    voice: {
+      heading: 'A word from our captain',
+      role: 'Captain, Surabaya Japanese Basket',
+      paragraphs: [
+        'It has been six months since I started working in Surabaya.',
+        'Settling into a new environment usually takes time, but people shared all kinds of information with me, from nearby restaurants to shopping spots, so I was able to adjust smoothly. I am very grateful.',
+        'Beyond basketball, I expect even more to look forward to, such as useful connections for work and golf.',
+        'Recently I have also had chances to play basketball with people from other countries, and I am happy to see my circle of friends growing.',
+        'Let us enjoy life in Surabaya together, making the most of both work and our private lives. ☺',
       ],
     },
     gallery: {
