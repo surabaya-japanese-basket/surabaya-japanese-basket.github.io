@@ -291,7 +291,7 @@ section.block p.note {
 .faq-item[open] { border-color: var(--color-accent); }
 .faq-item p { margin: 0; padding: 0 18px 16px; color: var(--color-muted); }
 
-/* ---------- 部長の声 ---------- */
+/* ---------- 部員の声 ---------- */
 .voice-card {
   position: relative;
   margin: 24px 0 0;
