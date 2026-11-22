@@ -24,15 +24,30 @@ const photos = Object.entries(
 <Base lang={lang}>
   <section class="hero">
     <CourtLines />
-    <div class="wrap hero-inner">
-      <p class="badge">{t.hero.badge}</p>
-      <p class="wordmark" aria-hidden="true">SURABAYA<br />JAPANESE <em>BASKET</em></p>
-      <h1>{t.hero.heading}</h1>
-      <p class="lead">{t.hero.lead}</p>
-      <div class="cta-row">
-        <a class="btn" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.hero.cta}</a>
-        <a class="btn ghost" href="#join">{t.hero.ctaSub}</a>
+    <div class:list={['wrap', 'hero-inner', { 'has-photo': photos.length > 0 }]}>
+      <div class="hero-text">
+        <p class="badge">{t.hero.badge}</p>
+        <p class="wordmark" aria-hidden="true">SURABAYA<br />JAPANESE<br /><em>BASKET</em></p>
+        <h1>{t.hero.heading}</h1>
+        <p class="lead">{t.hero.lead}</p>
+        <div class="cta-row">
+          <a class="btn" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.hero.cta}</a>
+          <a class="btn ghost" href="#join">{t.hero.ctaSub}</a>
+        </div>
       </div>
+      {
+        photos[0] && (
+          <figure class="hero-photo">
+            <Image
+              src={photos[0]}
+              alt={t.hero.photoAlt}
+              widths={[640, 960, 1280]}
+              sizes="(min-width: 900px) 520px, calc(100vw - 48px)"
+              loading="eager"
+            />
+          </figure>
+        )
+      }
     </div>
     <Mascots bold />
   </section>
@@ -83,7 +98,7 @@ const photos = Object.entries(
         photos.length > 0 ? (
           <div class="gallery-grid">
             {photos.map((src) => (
-              <Image src={src} alt={t.gallery.alt} width={480} height={480} loading="lazy" />
+              <Image src={src} alt={t.gallery.alt} width={720} height={480} loading="lazy" />
             ))}
           </div>
         ) : (

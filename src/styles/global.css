@@ -118,7 +118,24 @@ h1, h2 { text-wrap: balance; font-feature-settings: 'palt'; }
   letter-spacing: -0.005em;
   margin: 0 0 22px;
 }
-.wordmark em { font-style: italic; color: var(--color-accent); }
+.wordmark em { display: block; font-style: italic; color: var(--color-accent); }
+
+/* 写真があるときは 文字 + 写真 の2カラム */
+.hero-inner.has-photo { display: grid; gap: 28px; align-items: center; }
+.hero-photo { margin: 0; padding: 0 10px 10px 0; }
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 10px 10px 0 var(--color-accent);
+}
+@media (min-width: 900px) {
+  .hero-inner.has-photo { grid-template-columns: 1.05fr 0.95fr; gap: 48px; }
+  .hero-inner.has-photo .wordmark { font-size: clamp(3.2rem, 8vw, 6.4rem); }
+}
 
 .hero h1 {
   font-size: clamp(1.3rem, 3.6vw, 1.9rem);
@@ -206,8 +223,8 @@ section.block p.note {
   font-size: 0.92rem;
 }
 
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin: 22px 0; }
-.gallery-grid img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); display: block; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 22px 0; }
+.gallery-grid img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); display: block; }
 .gallery-grid .ph {
   aspect-ratio: 1;
   display: grid;
