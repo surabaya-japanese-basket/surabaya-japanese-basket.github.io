@@ -38,7 +38,7 @@ export const ui = {
       heading: '参加案内',
       lead: '見学だけでも大丈夫です。まずは気軽にご連絡ください。',
       rows: [
-        { label: '練習日', value: '毎週土曜日（基本）' },
+        { label: '練習日', value: '毎週土曜日' },
         { label: '時間', value: '16:00〜18:00' },
         { label: '場所', value: 'MAXICOURT Royal Surabaya または Golden City Mall' }, // TODO: 住所・地図リンク
         { label: '参加費', value: 'Rp 50,000 前後（会場・人数により変わります）' },
@@ -88,7 +88,7 @@ export const ui = {
       heading: 'Join us',
       lead: 'Just want to watch? That is fine. Feel free to get in touch first.',
       rows: [
-        { label: 'Day', value: 'Saturdays (usually)' },
+        { label: 'Day', value: 'Every Saturday' },
         { label: 'Time', value: '4:00 PM – 6:00 PM' },
         { label: 'Place', value: 'MAXICOURT Royal Surabaya or Golden City Mall' },
         { label: 'Fee', value: 'Around Rp 50,000 (varies by venue and turnout)' },
