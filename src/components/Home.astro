@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Mascots from './Mascots.astro';
 import CourtLines from './CourtLines.astro';
+import CaptainShark from './CaptainShark.astro';
 import { ui, INSTAGRAM_URL, FORM_URL, type Lang } from '../i18n/ui';
 
 interface Props {
@@ -152,6 +153,7 @@ const photos = Object.entries(
         <blockquote>
           {t.voice.paragraphs.map((p) => <p>{p}</p>)}
         </blockquote>
+        <div class="voice-icon"><CaptainShark /></div>
       </figure>
     </div>
   </section>

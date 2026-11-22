@@ -1,0 +1,30 @@
+---
+// 「キャプテンより」に添える、キャプテンマーク（C）の腕章をつけたサメ。仮の自作イラスト。
+---
+
+<svg class="captain-shark" viewBox="0 0 230 190" role="presentation" aria-hidden="true" focusable="false">
+  <path class="body" d="M100 8 C 112 34 122 52 132 64 L 70 64 C 82 50 92 30 100 8 Z"></path>
+  <ellipse class="body" cx="100" cy="122" rx="78" ry="62"></ellipse>
+  <path class="belly" d="M44 132 C 52 176 148 176 156 132 C 140 150 60 150 44 132 Z"></path>
+  <circle class="belly" cx="72" cy="108" r="9"></circle>
+  <circle class="body" cx="74" cy="109" r="4.5"></circle>
+  <circle class="belly" cx="128" cy="108" r="9"></circle>
+  <circle class="body" cx="126" cy="109" r="4.5"></circle>
+  <path class="belly" d="M74 134 Q 100 156 126 134 Z"></path>
+  <path class="teeth" d="M82 135 l5 8 5-6 5 9 5-9 5 6 5-8"></path>
+  <path class="body" d="M166 116 C 190 100 200 76 196 52 C 214 70 214 104 190 134 Z"></path>
+  <g transform="rotate(-24 193 92)">
+    <rect class="band" x="178" y="82" width="30" height="20" rx="3"></rect>
+    <text x="193" y="97" text-anchor="middle">C</text>
+  </g>
+  <path class="body" d="M30 140 C 6 132 -6 150 6 168 C 16 156 26 152 38 154 Z"></path>
+</svg>
+
+<style>
+  .captain-shark { display: block; width: 124px; height: auto; }
+  .captain-shark .body { fill: var(--color-text); }
+  .captain-shark .belly { fill: var(--color-surface); }
+  .captain-shark .teeth { fill: none; stroke: var(--color-text); stroke-width: 2; stroke-linejoin: round; }
+  .captain-shark .band { fill: var(--color-accent); }
+  .captain-shark text { font-family: var(--display); font-weight: 800; font-size: 19px; fill: #fff; }
+</style>
