@@ -238,6 +238,17 @@ section.block p.note {
   background: var(--color-surface);
 }
 
+/* ---------- share banners ---------- */
+.share-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 24px 0 20px; align-items: start; }
+@media (min-width: 760px) { .share-grid { grid-template-columns: 1.4fr 1fr; } }
+.share-card { margin: 0; background: var(--color-bg); border: 1px solid var(--color-line); border-radius: var(--radius); padding: 14px; }
+.share-card img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--color-line); }
+.share-card.story img { max-width: 260px; margin: 0 auto; }
+.share-card figcaption { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+.share-name { font-weight: 700; font-size: 0.92rem; }
+.btn.small { padding: 7px 18px; font-size: 0.85rem; }
+.copy-btn { cursor: pointer; font: inherit; font-weight: 700; color: var(--color-text); }
+
 /* ---------- closing CTA ---------- */
 .closing { background: var(--color-accent); color: var(--color-accent-ink); padding: 72px 0; }
 .closing h2 { font-size: clamp(1.9rem, 6.4vw, 3.2rem); margin-bottom: 14px; }

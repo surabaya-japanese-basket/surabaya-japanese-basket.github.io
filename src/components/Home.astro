@@ -10,6 +10,8 @@ interface Props {
 }
 const { lang } = Astro.props;
 const t = ui[lang];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const siteUrl = new URL(`${base}/`, Astro.site).href;
 
 // src/assets/gallery/ に置いた画像を、ファイル名順に自動で並べる。
 const photos = Object.entries(
@@ -113,6 +115,35 @@ const photos = Object.entries(
     </div>
   </section>
 
+  <section class="block tint" id="share">
+    <div class="wrap">
+      <p class="kicker">SHARE</p>
+      <h2>{t.share.heading}</h2>
+      <p>{t.share.lead}</p>
+      <div class="share-grid">
+        <figure class="share-card">
+          <a href={`${base}/banners/banner-square.png`} target="_blank" rel="noopener">
+            <img src={`${base}/banners/banner-square.png`} alt={t.share.squareAlt} width="1080" height="1080" loading="lazy" />
+          </a>
+          <figcaption>
+            <span class="share-name">{t.share.squareLabel}</span>
+            <a class="btn small" href={`${base}/banners/banner-square.png`} download="surabaya-japanese-basket-square.png">{t.share.download}</a>
+          </figcaption>
+        </figure>
+        <figure class="share-card story">
+          <a href={`${base}/banners/banner-story.png`} target="_blank" rel="noopener">
+            <img src={`${base}/banners/banner-story.png`} alt={t.share.storyAlt} width="1080" height="1920" loading="lazy" />
+          </a>
+          <figcaption>
+            <span class="share-name">{t.share.storyLabel}</span>
+            <a class="btn small" href={`${base}/banners/banner-story.png`} download="surabaya-japanese-basket-story.png">{t.share.download}</a>
+          </figcaption>
+        </figure>
+      </div>
+      <button type="button" class="btn ghost copy-btn" data-copy={siteUrl} data-done={t.share.copied}>{t.share.copyUrl}</button>
+    </div>
+  </section>
+
   <section class="closing" id="contact">
     <div class="wrap">
       <p class="kicker light">CONTACT</p>
@@ -122,3 +153,20 @@ const photos = Object.entries(
     </div>
   </section>
 </Base>
+
+<script>
+  // 「URLをコピー」ボタン。クリップボードが使えない環境では選択用に URL を表示する。
+  document.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach((btn) => {
+    const original = btn.textContent;
+    btn.addEventListener('click', async () => {
+      const url = btn.dataset.copy ?? '';
+      try {
+        await navigator.clipboard.writeText(url);
+        btn.textContent = btn.dataset.done ?? 'OK';
+        setTimeout(() => (btn.textContent = original), 2000);
+      } catch {
+        window.prompt('URL', url);
+      }
+    });
+  });
+</script>
