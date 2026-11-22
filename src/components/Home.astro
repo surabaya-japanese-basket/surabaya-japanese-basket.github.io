@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Mascots from './Mascots.astro';
+import CourtLines from './CourtLines.astro';
 import { ui, INSTAGRAM_URL, type Lang } from '../i18n/ui';
 
 interface Props {
@@ -22,21 +23,23 @@ const photos = Object.entries(
 
 <Base lang={lang}>
   <section class="hero">
-    <div class="wrap">
+    <CourtLines />
+    <div class="wrap hero-inner">
       <p class="badge">{t.hero.badge}</p>
-      <p class="eyebrow">{t.hero.eyebrow}</p>
+      <p class="wordmark" aria-hidden="true">SURABAYA<br />JAPANESE <em>BASKET</em></p>
       <h1>{t.hero.heading}</h1>
       <p class="lead">{t.hero.lead}</p>
       <div class="cta-row">
         <a class="btn" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.hero.cta}</a>
         <a class="btn ghost" href="#join">{t.hero.ctaSub}</a>
       </div>
-      <Mascots />
     </div>
+    <Mascots bold />
   </section>
 
   <section class="block" id="about">
     <div class="wrap">
+      <p class="kicker">ABOUT</p>
       <h2>{t.about.heading}</h2>
       {t.about.body.map((p) => <p>{p}</p>)}
       <ul class="facts">
@@ -52,14 +55,15 @@ const photos = Object.entries(
     </div>
   </section>
 
-  <section class="block" id="join">
+  <section class="block tint" id="join">
     <div class="wrap">
+      <p class="kicker">JOIN US</p>
       <h2>{t.join.heading}</h2>
       <p>{t.join.lead}</p>
-      <dl class="rows">
+      <dl class="info-grid">
         {
-          t.join.rows.map((r) => (
-            <div>
+          t.join.rows.map((r, i) => (
+            <div class:list={['info', { big: i === 1, wide: i === 2 }]}>
               <dt>{r.label}</dt>
               <dd>{r.value}</dd>
             </div>
@@ -72,6 +76,7 @@ const photos = Object.entries(
 
   <section class="block" id="gallery">
     <div class="wrap">
+      <p class="kicker">GALLERY</p>
       <h2>{t.gallery.heading}</h2>
       <p>{t.gallery.lead}</p>
       {
@@ -89,15 +94,16 @@ const photos = Object.entries(
           </div>
         )
       }
-      <a class="btn" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.gallery.cta}</a>
+      <a class="btn ghost" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.gallery.cta}</a>
     </div>
   </section>
 
-  <section class="block" id="contact">
+  <section class="closing" id="contact">
     <div class="wrap">
-      <h2>{t.contact.heading}</h2>
+      <p class="kicker light">CONTACT</p>
+      <h2>{t.contact.title}</h2>
       <p>{t.contact.lead}</p>
-      <a class="btn" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.contact.cta}</a>
+      <a class="btn invert" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.contact.cta}</a>
     </div>
   </section>
 </Base>

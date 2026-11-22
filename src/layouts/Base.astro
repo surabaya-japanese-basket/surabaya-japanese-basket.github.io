@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Mascots from '../components/Mascots.astro';
-import { ui, languages, type Lang } from '../i18n/ui';
+import { ui, languages, INSTAGRAM_URL, type Lang } from '../i18n/ui';
 
 interface Props {
   lang: Lang;
@@ -26,18 +26,32 @@ const href = (l: Lang) => (l === 'ja' ? `${base}/` : `${base}/en/`);
     <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
     <link rel="alternate" hreflang="ja" href={href('ja')} />
     <link rel="alternate" hreflang="en" href={href('en')} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;1,800&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+    />
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
     <header class="header">
       <div class="wrap">
-        <a class="brand" href={href(lang)}>🏀 {t.siteName}</a>
+        <a class="brand" href={href(lang)}>
+          <svg class="ball" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10.5"></circle>
+            <path d="M12 1.5v21M1.5 12h21M4.6 4.6c3.6 3.6 3.6 11.2 0 14.8M19.4 4.6c-3.6 3.6-3.6 11.2 0 14.8"></path>
+          </svg>
+          <span>{t.siteName}</span>
+        </a>
         <nav class="nav" aria-label="Main">
-          <a href="#about">{t.nav.about}</a>
-          <a href="#join">{t.nav.join}</a>
-          <a href="#gallery">{t.nav.gallery}</a>
-          <a href="#contact">{t.nav.contact}</a>
+          <div class="nav-links">
+            <a href="#about">{t.nav.about}</a>
+            <a href="#join">{t.nav.join}</a>
+            <a href="#gallery">{t.nav.gallery}</a>
+          </div>
           <a class="lang" href={href(other)} hreflang={other} lang={other}>{languages[other]}</a>
+          <a class="nav-cta" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.nav.cta}</a>
         </nav>
       </div>
     </header>

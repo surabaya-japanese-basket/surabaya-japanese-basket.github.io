@@ -14,7 +14,7 @@ export const ui = {
     title: 'スラバヤ日本人会バスケ部 | スラバヤ在住の日本人バスケチーム',
     description:
       'インドネシア・スラバヤ在住の日本人バスケチーム。毎週土曜の夕方に練習しています。初心者から経験者まで、ゆるーく活動中。',
-    nav: { about: 'チーム紹介', join: '参加案内', gallery: 'ギャラリー', contact: '連絡先' },
+    nav: { about: 'チーム紹介', join: '参加案内', gallery: 'ギャラリー', contact: '連絡先', cta: '参加する' },
     hero: {
       badge: 'メンバー募集中',
       eyebrow: 'Surabaya Japanese Basket',
@@ -57,6 +57,7 @@ export const ui = {
     },
     contact: {
       heading: '連絡先',
+      title: '一緒に、バスケしませんか？',
       lead: '参加希望・見学・スラバヤ出張時の参加など、Instagram の DM からお気軽にどうぞ。',
       cta: 'Instagram で DM する',    },
     tagline: 'スラバヤは、Sura（サメ）と Baya（ワニ）の街。',
@@ -68,7 +69,7 @@ export const ui = {
     title: 'Surabaya Japanese Basket | A friendly basketball team in Surabaya',
     description:
       'A basketball team of Japanese residents in Surabaya, Indonesia. We practice every Saturday evening. Beginners to experienced players are all welcome.',
-    nav: { about: 'About', join: 'Join us', gallery: 'Gallery', contact: 'Contact' },
+    nav: { about: 'About', join: 'Join us', gallery: 'Gallery', contact: 'Contact', cta: 'Join' },
     hero: {
       badge: 'Players wanted',
       eyebrow: 'Surabaya Japanese Basket',
@@ -111,6 +112,7 @@ export const ui = {
     },
     contact: {
       heading: 'Contact',
+      title: 'Come play with us.',
       lead: 'To join, visit, or drop in while you are in Surabaya, send us a DM on Instagram.',
       cta: 'DM us on Instagram',    },
     tagline: 'Surabaya: the city of Sura (shark) and Baya (crocodile).',

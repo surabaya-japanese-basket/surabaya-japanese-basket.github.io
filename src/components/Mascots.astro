@@ -3,25 +3,27 @@
 // ユニフォームのロゴ素材を受け取ったら差し替える。市の公式紋章は使わない。
 interface Props {
   compact?: boolean;
+  bold?: boolean;
 }
-const { compact = false } = Astro.props;
+const { compact = false, bold = false } = Astro.props;
 ---
 
 <svg
-  class:list={['mascots', { compact }]}
+  class:list={['mascots', { compact, bold }]}
   viewBox="0 0 640 96"
+  preserveAspectRatio={bold ? 'xMidYMax slice' : 'xMidYMid meet'}
   role="presentation"
   aria-hidden="true"
   focusable="false"
 >
   <rect class="water" x="0" y="58" width="640" height="38"></rect>
-  <path class="fin" d="M96 60 C 112 56 124 38 134 8 C 140 32 156 52 176 60 Z"></path>
-  <rect class="croc" x="404" y="48" width="104" height="14" rx="7"></rect>
-  <circle class="croc" cx="412" cy="46" r="3.6"></circle>
+  <path class="fin" d="M196 60 C 212 56 224 38 234 8 C 240 32 256 52 276 60 Z"></path>
+  <rect class="croc" x="384" y="48" width="104" height="14" rx="7"></rect>
+  <circle class="croc" cx="392" cy="46" r="3.6"></circle>
+  <circle class="croc" cx="454" cy="43" r="6.5"></circle>
   <circle class="croc" cx="474" cy="43" r="6.5"></circle>
-  <circle class="croc" cx="494" cy="43" r="6.5"></circle>
+  <circle class="eye" cx="454" cy="42" r="2"></circle>
   <circle class="eye" cx="474" cy="42" r="2"></circle>
-  <circle class="eye" cx="494" cy="42" r="2"></circle>
   <path
     class="wave"
     d="M0 60 Q 20 54 40 60 T 80 60 T 120 60 T 160 60 T 200 60 T 240 60 T 280 60 T 320 60 T 360 60 T 400 60 T 440 60 T 480 60 T 520 60 T 560 60 T 600 60 T 640 60"
@@ -33,14 +35,17 @@ const { compact = false } = Astro.props;
     display: block;
     width: 100%;
     height: auto;
-    margin-top: 36px;
   }
   .mascots.compact {
     max-width: 320px;
     margin: 0 0 12px;
   }
+  .mascots.bold {
+    height: clamp(110px, 16vw, 200px);
+    margin: 0;
+  }
   .water { fill: var(--color-accent); opacity: 0.08; }
-  .fin { fill: var(--color-text); opacity: 0.88; }
+  .fin { fill: var(--color-text); opacity: 0.9; }
   .croc { fill: var(--color-accent); }
   .eye { fill: var(--color-bg); }
   .wave {
@@ -50,4 +55,7 @@ const { compact = false } = Astro.props;
     stroke-linecap: round;
     opacity: 0.55;
   }
+  /* ヒーロー下端の帯: 水面を濃い緑にして画面幅いっぱいに敷く */
+  .bold .water { opacity: 1; }
+  .bold .wave { stroke: var(--color-bg); opacity: 0.7; }
 </style>

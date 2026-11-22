@@ -1,0 +1,27 @@
+---
+// バスケットコートのライン柄（ヒーローの背景装飾）
+---
+
+<svg class="court" viewBox="0 0 640 640" role="presentation" aria-hidden="true" focusable="false">
+  <circle cx="400" cy="320" r="190"></circle>
+  <circle cx="400" cy="320" r="64"></circle>
+  <line x1="400" y1="0" x2="400" y2="640"></line>
+  <rect x="400" y="230" width="240" height="180"></rect>
+  <path d="M400 130 A 190 190 0 0 1 400 510"></path>
+</svg>
+
+<style>
+  .court {
+    position: absolute;
+    right: -140px;
+    top: -30px;
+    width: 640px;
+    height: 640px;
+    max-width: none;
+    fill: none;
+    stroke: var(--color-accent);
+    stroke-width: 3;
+    opacity: 0.13;
+    pointer-events: none;
+  }
+</style>
