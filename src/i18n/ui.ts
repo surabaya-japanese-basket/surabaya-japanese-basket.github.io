@@ -57,7 +57,7 @@ export const ui = {
         { label: '参加費', value: 'Rp 50,000 前後（会場・人数により変わります）' },
         { label: '持ち物', value: '動きやすい服装・体育館シューズ・飲み物' },
       ],
-      note: '人数が足りないときは、Golden City Mall でインドネシアの方々のチームに混ぜてもらうこともあります。その週の場所・開催状況は、フォームまたは Instagram の DM でお問い合わせください。',
+      note: '人数が足りないときは、ローカルのインドネシアの方々を誘ったり、逆に参加させていただいたりしています。その週の場所・開催状況は、フォームまたは Instagram の DM にてお問い合わせください。',
     },
     faq: {
       heading: 'はじめての方へ',
@@ -73,7 +73,7 @@ export const ui = {
         },
         {
           q: '人が少ない日はどうなりますか？',
-          a: 'ハーフコートで楽しむことがあります。人数が足りないときは、Golden City Mall でインドネシアの方々のチームに混ぜてもらうこともあります。',
+          a: 'ハーフコートで楽しむことがあります。人数が足りないときは、ローカルのインドネシアの方々を誘ったり、逆に参加させていただいたりしています。',
         },
         {
           q: '出張や旅行中でも参加できますか？',
@@ -154,7 +154,7 @@ export const ui = {
         { label: 'Fee', value: 'Around Rp 50,000 (varies by venue and turnout)' },
         { label: 'Bring', value: 'Comfortable clothes, indoor court shoes, and a drink' },
       ],
-      note: 'When we are short on players, we sometimes join local Indonesian teams at Golden City Mall. For that week\'s venue and whether we are playing, please use the form or send us a DM on Instagram.',
+      note: 'When we are short on players, we sometimes invite local Indonesian players to join us, or join local Indonesian teams ourselves. For that week\'s venue and whether we are playing, please use the form or send us a DM on Instagram.',
     },
     faq: {
       heading: 'New here?',
@@ -170,7 +170,7 @@ export const ui = {
         },
         {
           q: 'What happens when few people show up?',
-          a: 'We sometimes play half-court. When we are short on players, we may also join local Indonesian teams at Golden City Mall.',
+          a: 'We sometimes play half-court. When we are short on players, we invite local Indonesian players to join us, or join local Indonesian teams ourselves.',
         },
         {
           q: 'Can I join while visiting Surabaya on business or travel?',
