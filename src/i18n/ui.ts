@@ -53,7 +53,7 @@ export const ui = {
       rows: [
         { label: '練習日', value: '毎週土曜日' },
         { label: '時間', value: '16:00〜18:00' },
-        { label: '場所', value: 'スラバヤ市内のバスケットボールコート（MAXICOURT Royal Surabaya、Golden City Mall、Ciputra Mall など）' }, // TODO: 会場名の追加・地図リンク
+        { label: '場所', value: 'スラバヤ市内のバスケットボールコート（MAXICOURT Royal Surabaya、Golden City Mall、Ciputra World Surabaya、H.O.S.T Arena Basketball など）' }, // TODO: 会場名の追加・地図リンク
         { label: '参加費', value: 'Rp 50,000 前後（会場・人数により変わります）' },
         { label: '持ち物', value: '動きやすい服装・体育館シューズ・飲み物' },
       ],
@@ -69,7 +69,7 @@ export const ui = {
         { q: '参加費はいくらですか？', a: 'Rp 50,000 前後です。会場や人数によって変わります。' },
         {
           q: 'いつ、どこでやっていますか？',
-          a: '毎週土曜日の 16:00〜18:00 に、スラバヤ市内のバスケットボールコート（MAXICOURT Royal Surabaya、Golden City Mall、Ciputra Mall など）で練習しています。その週の場所は、フォームか Instagram の DM でご確認ください。',
+          a: '毎週土曜日の 16:00〜18:00 に、スラバヤ市内のバスケットボールコート（MAXICOURT Royal Surabaya、Golden City Mall、Ciputra World Surabaya、H.O.S.T Arena Basketball など）で練習しています。その週の場所は、フォームか Instagram の DM でご確認ください。',
         },
         {
           q: '人が少ない日はどうなりますか？',
@@ -150,7 +150,7 @@ export const ui = {
       rows: [
         { label: 'Day', value: 'Every Saturday' },
         { label: 'Time', value: '4:00 PM – 6:00 PM' },
-        { label: 'Place', value: 'Basketball courts around Surabaya (MAXICOURT Royal Surabaya, Golden City Mall, Ciputra Mall, and others)' },
+        { label: 'Place', value: 'Basketball courts around Surabaya (MAXICOURT Royal Surabaya, Golden City Mall, Ciputra World Surabaya, H.O.S.T Arena Basketball, and others)' },
         { label: 'Fee', value: 'Around Rp 50,000 (varies by venue and turnout)' },
         { label: 'Bring', value: 'Comfortable clothes, indoor court shoes, and a drink' },
       ],
@@ -166,7 +166,7 @@ export const ui = {
         { q: 'How much does it cost?', a: 'Around Rp 50,000. It varies by venue and turnout.' },
         {
           q: 'When and where do you play?',
-          a: 'Saturdays, 4:00 PM to 6:00 PM, at basketball courts around Surabaya (MAXICOURT Royal Surabaya, Golden City Mall, Ciputra Mall, and others). For that week\'s venue, please check with us through the form or an Instagram DM.',
+          a: 'Saturdays, 4:00 PM to 6:00 PM, at basketball courts around Surabaya (MAXICOURT Royal Surabaya, Golden City Mall, Ciputra World Surabaya, H.O.S.T Arena Basketball, and others). For that week\'s venue, please check with us through the form or an Instagram DM.',
         },
         {
           q: 'What happens when few people show up?',
