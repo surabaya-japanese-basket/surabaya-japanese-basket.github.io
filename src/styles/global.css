@@ -133,6 +133,14 @@ dl.rows dd { margin: 0; }
   gap: 10px;
   margin: 20px 0;
 }
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
 .gallery-grid .ph {
   aspect-ratio: 1;
   display: grid;

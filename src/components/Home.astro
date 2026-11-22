@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import { ui, INSTAGRAM_URL, type Lang } from '../i18n/ui';
 
@@ -7,6 +8,15 @@ interface Props {
 }
 const { lang } = Astro.props;
 const t = ui[lang];
+
+// src/assets/gallery/ に置いた画像を、ファイル名順に自動で並べる。
+const photos = Object.entries(
+  import.meta.glob<{ default: ImageMetadata }>('../assets/gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', {
+    eager: true,
+  }),
+)
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, mod]) => mod.default);
 ---
 
 <Base lang={lang}>
@@ -58,9 +68,21 @@ const t = ui[lang];
     <div class="wrap">
       <h2>{t.gallery.heading}</h2>
       <p>{t.gallery.lead}</p>
-      <div class="gallery-grid" aria-hidden="true">
-        {Array.from({ length: 6 }).map(() => <div class="ph">{t.gallery.placeholder}</div>)}
-      </div>
+      {
+        photos.length > 0 ? (
+          <div class="gallery-grid">
+            {photos.map((src) => (
+              <Image src={src} alt={t.gallery.alt} width={480} height={480} loading="lazy" />
+            ))}
+          </div>
+        ) : (
+          <div class="gallery-grid" aria-hidden="true">
+            {Array.from({ length: 6 }).map(() => (
+              <div class="ph">{t.gallery.placeholder}</div>
+            ))}
+          </div>
+        )
+      }
       <a class="btn" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">{t.gallery.cta}</a>
     </div>
   </section>

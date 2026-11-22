@@ -50,6 +50,7 @@ export const ui = {
       heading: 'ギャラリー',
       lead: '練習や交流試合の様子は Instagram で更新しています。',
       placeholder: '写真準備中',
+      alt: 'バスケ部の練習風景',
       cta: 'Instagram で見る',
     },
     contact: {
@@ -100,6 +101,7 @@ export const ui = {
       heading: 'Gallery',
       lead: 'We post photos of practices and friendly games on Instagram.',
       placeholder: 'Photos coming soon',
+      alt: 'Practice at Surabaya Japanese Basket',
       cta: 'View on Instagram',
     },
     contact: {
