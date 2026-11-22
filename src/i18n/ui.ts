@@ -83,7 +83,7 @@ export const ui = {
       ],
     },
     voice: {
-      heading: '部員の声',
+      heading: 'キャプテンより',
       paragraphs: [
         'スラバヤでの勤務も半年が経ちました。',
         '本来であれば、慣れない環境での生活には時間がかかるものですが、近隣の飲食店やショッピングスポットなど、さまざまな情報を教えていただき、おかげさまでスムーズに生活に馴染むことができ、大変感謝しています。',
@@ -190,7 +190,7 @@ export const ui = {
       ],
     },
     voice: {
-      heading: 'A word from a member',
+      heading: 'A word from our captain',
       paragraphs: [
         'It has been six months since I started working in Surabaya.',
         'Settling into a new environment usually takes time, but people shared all kinds of information with me, from nearby restaurants to shopping spots, so I was able to adjust smoothly. I am very grateful.',
