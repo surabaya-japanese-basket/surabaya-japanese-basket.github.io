@@ -23,6 +23,7 @@ export const ui = {
       photoAlt: 'バスケの試合後に、日本人メンバーと対戦相手のみんなで撮った集合写真',
       cta: 'Instagram の DM で参加相談',
       ctaSub: '参加案内を見る',
+      langLink: 'English version',
     },
     about: {
       heading: 'チーム紹介',
@@ -90,6 +91,7 @@ export const ui = {
       photoAlt: 'A group photo of our members and the opposing team after a game',
       cta: 'Message us on Instagram',
       ctaSub: 'How to join',
+      langLink: '日本語版はこちら',
     },
     about: {
       heading: 'About the team',

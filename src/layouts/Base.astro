@@ -74,6 +74,7 @@ const pageUrl = new URL(href(lang), Astro.site).href;
       <div class="wrap">
         <Mascots compact />
         <p class="tagline">{t.tagline}</p>
+        <p><a class="lang-link" href={href(other)} hreflang={other} lang={other}>{t.hero.langLink} →</a></p>
         <p>{t.footer}</p>
       </div>
     </footer>
